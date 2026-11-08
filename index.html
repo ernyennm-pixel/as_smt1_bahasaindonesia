@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CBT Bahasa Indonesia Kelas 6 – SD Negeri 1 Malebo</title>
+<style>
+:root{--b:#1747d6;--b2:#0b2fa0;--bg:#f2f5fc;--c:#fff;--t:#1b2540;--m:#6b7692;--l:#e3e8f4;--g:#12a150;--o:#f59e0b;--r:#dc2626}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--t)}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+#app{display:grid;grid-template-columns:210px 1fr;min-height:100vh;padding-bottom:44px}
+aside{background:#fff;border-right:1px solid var(--l);padding:16px 12px;position:sticky;top:0;height:100vh}
+.logo{display:flex;gap:8px;align-items:center;font-weight:800;color:var(--b2);margin-bottom:18px}.logo i{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#f59e0b,#dc2626 50%,#1747d6);display:block}
+.logo small{display:block;font-weight:500;color:var(--m);font-size:11px}
+.nv{display:flex;gap:10px;align-items:center;width:100%;border:0;background:none;padding:11px 12px;border-radius:8px;color:#3a4566;text-align:left}
+.nv.on{background:var(--b);color:#fff;font-weight:600}.nv:hover:not(.on){background:var(--bg)}
+main{padding:18px 22px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px}.top h1{margin:0;font-size:22px;color:var(--b2)}.top p{margin:0;color:var(--m);font-size:13px}
+.usr{display:flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--l);padding:6px 12px;border-radius:30px;font-size:13px}.av{width:30px;height:30px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;font-weight:700}
+.card{background:var(--c);border:1px solid var(--l);border-radius:14px;padding:16px}
+.ban{background:linear-gradient(120deg,var(--b2),var(--b) 60%,#3d7bff);color:#fff;border-radius:16px;padding:24px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.ban h2{margin:0 0 4px;font-size:24px}.ban p{margin:0 0 14px;opacity:.9}
+.btn{border:0;border-radius:8px;padding:10px 18px;font-weight:600;background:var(--b);color:#fff}.btn.w{background:#fff;color:var(--b2)}.btn.o{background:#fff;color:var(--b);border:1px solid var(--b)}.btn.g{background:var(--g)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.tc{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 20px;text-align:center}.tc b{display:block;font-size:28px;letter-spacing:1px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}.g2{display:grid;grid-template-columns:1fr 330px;gap:14px}
+.ac{display:flex;flex-direction:column;gap:6px;align-items:flex-start}.ac .ic{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:22px}
+.st{display:flex;gap:10px;align-items:center}.st .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:20px}.st b{font-size:22px;display:block;line-height:1.1}.st span{color:var(--m);font-size:12px}
+h3{margin:0 0 10px;font-size:16px}label{font-size:12px;color:var(--m);display:block;margin:8px 0 3px}
+input[type=text],input[type=number],select,textarea{width:100%;padding:9px 11px;border:1px solid #cfd7ea;border-radius:8px;background:#fff}
+textarea{min-height:90px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #9db6ff}
+.err{color:var(--r);font-size:12px;min-height:16px;margin-top:4px}
+.li{padding:9px 0;border-bottom:1px solid var(--l);font-size:13px}.li:last-child{border:0}.tag{float:right;font-size:11px;padding:2px 8px;border-radius:10px;background:#e8f7ee;color:var(--g)}
+ol.pt{margin:0;padding-left:18px;font-size:13px;color:#3a4566}
+.foot{position:fixed;left:0;right:0;bottom:0;background:var(--b2);color:#fff;font-size:12px;padding:10px 20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;z-index:5}
+/* exam */
+.ex{display:grid;grid-template-columns:1fr 290px;gap:14px;align-items:start}
+.eh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;flex-wrap:wrap}
+.tm{background:var(--b2);color:#fff;border-radius:10px;padding:8px 16px;font-weight:700;font-size:20px;font-variant-numeric:tabular-nums}.tm.w{background:var(--r)}
+.qb{display:grid;gap:14px}.qb.p{grid-template-columns:1fr 1fr}
+.ps{background:#f7f9ff;border:1px solid var(--l);border-radius:12px;padding:14px;max-height:62vh;overflow:auto;font-size:14.5px}.ps h4{margin:0 0 8px;color:var(--b2)}
+.il{border:1px dashed var(--b);border-radius:10px;padding:10px;margin:8px 0;background:#f7f9ff;font-size:13px}
+.op{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;margin:8px 0;padding:11px 12px;border:1.5px solid var(--l);background:#fff;border-radius:10px}
+.op:hover{border-color:#9db6ff}.op.s{border-color:var(--b);background:#eaf0ff}.op i{font-style:normal;flex:none;width:26px;height:26px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-weight:700;font-size:13px}.op.s i{background:var(--b);color:#fff}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:14px;flex-wrap:wrap}
+.gr{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.nb{height:40px;border:1.5px solid var(--l);background:#fff;border-radius:8px;font-weight:600;position:relative}
+.nb.a{background:var(--g);color:#fff;border-color:var(--g)}.nb.f{background:var(--o);color:#fff;border-color:var(--o)}.nb.c{outline:3px solid #9db6ff}
+.lg{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--m);margin:10px 0}.lg s{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-1px;text-decoration:none}
+.ord{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+/* result */
+.ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;flex:none}.ring div{width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;color:var(--t)}.ring b{font-size:32px;line-height:1}.ring small{color:var(--m)}
+.pb{border:1px solid var(--l);border-radius:10px;padding:12px;margin:10px 0;background:#fff}.pb.ok{border-left:5px solid var(--g)}.pb.no{border-left:5px solid var(--r)}.pb.kk{border-left:5px solid var(--o)}
+.chip{display:inline-block;padding:3px 11px;border-radius:20px;border:1px solid var(--l);background:#fff;margin:0 4px 6px 0;font-size:13px}.chip.on{background:var(--b);color:#fff;border-color:var(--b)}
+.mo{position:fixed;inset:0;background:rgba(10,20,50,.55);display:none;place-items:center;z-index:20;padding:16px}.mo.on{display:grid}.mo .card{max-width:420px;width:100%}
+.hid{display:none}.ans{white-space:pre-wrap;background:#f7f9ff;border-radius:8px;padding:8px 10px;margin:4px 0 8px;font-size:14px}
+@media(max-width:900px){#app{grid-template-columns:1fr}aside{position:fixed;top:auto;bottom:44px;height:auto;width:100%;z-index:6;display:flex;padding:4px;border-top:1px solid var(--l);border-right:0}.logo{display:none}.nv{justify-content:center;padding:9px 4px;flex:1;font-size:13px}
+main{padding:14px 12px 70px}.g4{grid-template-columns:1fr 1fr}.g2,.ex,.qb.p{grid-template-columns:1fr}.ban h2{font-size:20px}.usr span{display:none}.ps{max-height:none}.foot span:not(:first-child){display:none}}
+</style></head><body>
+<div id="app">
+<aside><div class="logo"><i></i><div>SDN 1 MALEBO<small>Asesmen Digital</small></div></div>
+<button class="nv on" data-v="dash" onclick="show('dash')">🏠 Dashboard</button>
+<button class="nv" data-v="exam" onclick="startExam()">📝 Ujian</button>
+<button class="nv" data-v="res" onclick="show('res')">📊 Hasil</button>
+<button class="nv" onclick="logout()">🚪 Keluar</button></aside>
+<main>
+<div class="top"><div><h1>CBT Bahasa Indonesia</h1><p>Asesmen Sumatif Akhir TP · Kelas 6 Semester 1 · 2026/2027</p></div><div class="usr"><div class="av" id="av">S</div><span id="un">Siswa</span></div></div>
+<section id="v-dash">
+<div class="ban"><div><h2>Selamat datang, <span id="wn">Siswa</span>! 👋</h2><p>Siap menguji kemampuanmu? Kerjakan dengan teliti dan jujur.</p><button class="btn w" id="sb" onclick="startExam()">▶ Mulai Ujian</button></div><div class="tc"><small>Durasi ujian</small><b>90:00</b><small>Bahasa Indonesia</small></div></div>
+<div class="g4">
+<div class="card ac"><div class="ic" style="background:#e5edff">📝</div><b>Mulai Ujian</b><small>20 PG dan 5 uraian</small><button class="btn" onclick="startExam()">Mulai</button></div>
+<div class="card ac"><div class="ic" style="background:#e3f7ec">📊</div><b>Hasil Ujian</b><small>Nilai dan pembahasan</small><button class="btn g" onclick="show('res')">Lihat</button></div>
+<div class="card ac"><div class="ic" style="background:#f0e8ff">👤</div><b>Data Diri</b><small>Isi nama sebelum mulai</small><button class="btn" style="background:#7c3aed" onclick="$('#pn').focus()">Isi Data</button></div>
+<div class="card ac"><div class="ic" style="background:#fff1de">📖</div><b>Petunjuk</b><small>Baca aturan pengerjaan</small><button class="btn" style="background:var(--o)" onclick="$('#pet').scrollIntoView({behavior:'smooth'})">Baca</button></div></div>
+<div class="card"><h3>Ringkasan Asesmen</h3><div class="g4" style="margin:0">
+<div class="st"><div class="ic" style="background:#e5edff">📋</div><div><b>25</b><span>Total soal</span></div></div>
+<div class="st"><div class="ic" style="background:#e3f7ec">✅</div><div><b>20</b><span>Pilihan ganda</span></div></div>
+<div class="st"><div class="ic" style="background:#fff1de">✍️</div><div><b>5</b><span>Uraian</span></div></div>
+<div class="st"><div class="ic" style="background:#fde8e8">⏱️</div><div><b>90</b><span>Menit</span></div></div></div></div>
+<div class="g2" style="margin-top:14px">
+<div class="card" id="pet"><h3>Petunjuk Pengerjaan</h3><ol class="pt"><li>Berdoalah sebelum mulai mengerjakan.</li><li>Isi nama, kelas, dan nomor absen pada Data Diri.</li><li>Bacalah teks dan setiap soal dengan teliti.</li><li>Pilihan ganda: pilih satu huruf jawaban yang paling benar.</li><li>Uraian: tuliskan jawaban dengan kalimat yang jelas dan lengkap.</li><li>Gunakan tombol “Ragu-ragu” dan nomor soal untuk berpindah soal. Periksa kembali sebelum selesai.</li></ol>
+<h3 style="margin-top:16px">Cakupan Materi</h3><div class="li">Bab 1 Anak-Anak yang Mengubah Dunia <span class="tag">TP 6.1.1–6.1.6</span></div><div class="li">Bab 2 Nusantara Berjuta Cerita <span class="tag">TP 6.2.1–6.2.7</span></div></div>
+<div class="card"><h3>Data Siswa</h3><label>Nama lengkap</label><input type="text" id="pn" placeholder="Nama siswa"><label>Kelas</label><input type="text" id="pk" value="6"><label>No. Absen</label><input type="text" id="pa" placeholder="Contoh: 12"><div class="err" id="er"></div></div></div>
+</section>
+<section id="v-exam" class="hid"></section>
+<section id="v-res" class="hid"></section>
+</main></div>
+<div class="foot"><span>© 2026 SD Negeri 1 Malebo · Asesmen Sumatif Akhir TP Bahasa Indonesia</span><span>Kelas 6 / Fase C</span></div>
+<div class="mo" id="mo"><div class="card" id="mc"></div></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const P={T1:['TEKS 1 – Proses Daur Ulang Sampah Plastik','Sampah plastik sulit terurai di dalam tanah. Plastik dapat bertahan ratusan tahun sehingga menumpuk dan mencemari lingkungan. Salah satu cara untuk mengurangi penumpukan sampah plastik adalah dengan mendaur ulangnya.\n\nProses daur ulang dimulai dari pengumpulan sampah plastik oleh masyarakat atau petugas kebersihan. Setelah itu, sampah plastik dipilah berdasarkan jenis dan warnanya. Kemudian, plastik dicuci hingga bersih agar kotoran dan sisa makanan hilang. Selanjutnya, plastik dicacah menjadi potongan-potongan kecil. Potongan itu dipanaskan sampai meleleh, lalu dicetak menjadi barang baru, seperti ember, kursi, atau pot bunga.\n\nOleh karena itu, plastik bekas dapat dimanfaatkan kembali. Dengan daur ulang, sampah plastik berkurang dan lingkungan menjadi lebih bersih. Karena itu, kita perlu membiasakan diri memilah sampah mulai dari rumah.'],
+T2:['TEKS 2 – Asal Mula Sendang Bening','Di sebuah desa di kaki gunung, hiduplah seorang gadis yatim piatu bernama Sekar. Ia tinggal bersama neneknya yang sudah tua. Meskipun hidup sederhana, Sekar dikenal rajin, jujur, dan suka menolong.\n\nPada suatu musim kemarau yang panjang, sumur-sumur di desa mengering. Warga sangat kesulitan mendapatkan air. Suatu hari, Sekar mencari air di hutan dan bertemu seorang kakek yang kehausan. Tanpa berpikir panjang, Sekar memberikan air terakhir dari kendi miliknya kepada kakek itu.\n\nTernyata kakek itu adalah penjaga hutan yang sakti. Ia tersenyum, lalu menancapkan tongkatnya ke tanah. Seketika air jernih memancar deras dari tempat itu. “Terima kasih, Nak. Kebaikanmu akan membawa kebahagiaan bagi desamu,” kata kakek itu.\n\nSejak hari itu, warga desa tidak pernah kekurangan air. Mereka menamai mata air itu Sendang Bening dan menjaganya bersama-sama. Sekar pun hidup bahagia bersama neneknya.']};
+// [soal, [A,B,C,D], kunci, pembahasan]
+const Q=[
+['Menurut teks, sampah plastik menjadi masalah lingkungan karena ....',['mudah terurai dan membusuk di dalam tanah','sulit terurai sehingga menumpuk dan mencemari lingkungan','hanya dapat dibuat menjadi ember','tidak dapat dikumpulkan oleh petugas kebersihan'],1,'Sampah plastik sulit terurai sehingga menumpuk dan mencemari lingkungan.'],
+['Setelah dipilah berdasarkan jenis dan warnanya, sampah plastik selanjutnya ....',['dicetak menjadi barang baru','dipanaskan hingga meleleh','dicacah menjadi potongan kecil','dicuci hingga bersih'],3,'Urutan proses: dikumpulkan, dipilah, dicuci, dicacah, dipanaskan, dicetak.'],
+['Perhatikan ilustrasi berikut!<div class="il"><svg viewBox="0 0 320 110" width="100%" style="max-width:380px"><rect width="320" height="110" fill="#e6f3ff"/><rect y="78" width="320" height="32" fill="#7cc4f0"/><rect y="70" width="320" height="10" fill="#8bd17c"/><g fill="#1747d6"><circle cx="50" cy="40" r="9"/><rect x="42" y="50" width="16" height="24" rx="4"/><circle cx="90" cy="40" r="9"/><rect x="82" y="50" width="16" height="24" rx="4"/><circle cx="130" cy="40" r="9"/><rect x="122" y="50" width="16" height="24" rx="4"/></g><g fill="#c98b4b"><rect x="55" y="58" width="14" height="16" rx="5"/><rect x="95" y="58" width="14" height="16" rx="5"/><rect x="135" y="58" width="14" height="16" rx="5"/></g><circle cx="240" cy="40" r="9" fill="#dc2626"/><rect x="231" y="50" width="18" height="24" rx="4" fill="#dc2626"/><rect x="190" y="64" width="34" height="10" fill="#555"/></svg><br><b>ILUSTRASI</b> <i>Tiga anak membawa karung berisi botol plastik bekas menuju tempat pengumpulan sampah. Di belakang mereka tampak sungai yang bersih. Seorang petugas sedang menimbang karung yang mereka bawa.</i></div>Pesan yang tersirat dari ilustrasi tersebut adalah ....',['anak-anak peduli lingkungan dengan mengumpulkan sampah plastik untuk didaur ulang','sungai menjadi bersih karena petugas membersihkannya setiap hari','hanya petugas yang boleh mengumpulkan sampah plastik','anak-anak sedang bermain di tepi sungai'],0,'Anak-anak mengumpulkan botol plastik bekas untuk didaur ulang sehingga sungai tetap bersih; pesan tersiratnya adalah peduli lingkungan.'],
+['Agar kalimat “Setelah itu, sampah plastik dipilah berdasarkan jenis dan warnanya.” dibaca dengan intonasi yang tepat, pembaca harus ....',['membaca cepat tanpa berhenti sama sekali','menaikkan nada di akhir kalimat seperti bertanya','berhenti sejenak pada tanda koma dan menurunkan nada di akhir kalimat','berhenti setelah membaca setiap kata'],2,'Jeda singkat pada tanda koma dan nada turun di akhir kalimat berita.'],
+['Ide pokok paragraf kedua pada Teks 1 adalah ....',['tahapan proses daur ulang sampah plastik','bahaya sampah plastik bagi hewan','cara membuat pot bunga dari plastik','manfaat memilah sampah di rumah'],0,'Paragraf kedua menjelaskan tahapan daur ulang sampah plastik.'],
+['Paragraf pertama pada Teks 1 merupakan bagian ....',['deret penjelas','pernyataan umum','interpretasi','orientasi'],1,'Paragraf pertama berisi pernyataan umum tentang sampah plastik.'],
+['Urutan struktur teks eksplanasi yang benar adalah ....',['orientasi, komplikasi, resolusi','interpretasi, pernyataan umum, deret penjelas','deret penjelas, pernyataan umum, interpretasi','pernyataan umum, deret penjelas, interpretasi'],3,'Struktur teks eksplanasi: pernyataan umum, deret penjelas, interpretasi.'],
+['Kata penghubung yang menunjukkan urutan waktu pada Teks 1 adalah ....',['tetapi','karena','selanjutnya','atau'],2,'“Selanjutnya” menyatakan urutan waktu.'],
+['Kata penghubung “oleh karena itu” pada kalimat “Oleh karena itu, plastik bekas dapat dimanfaatkan kembali.” menyatakan hubungan ....',['pertentangan','akibat','urutan waktu','pilihan'],1,'“Oleh karena itu” menyatakan akibat dari kalimat sebelumnya.'],
+['Temanmu berpendapat bahwa membuang plastik ke sungai tidak apa-apa. Tanggapan yang santun dan tepat adalah ....',['“Menurutku pendapat itu kurang tepat karena plastik dapat mencemari sungai. Bagaimana kalau kita membuangnya ke tempat sampah?”','“Pendapatmu salah! Kamu tidak tahu apa-apa tentang sampah.”','“Terserah kamu saja, aku tidak peduli.”','“Sebaiknya kamu diam saja kalau tidak mengerti.”'],0,'Tanggapan santun disertai alasan dan saran yang membangun.'],
+['Warga desa kesulitan mendapatkan air karena ....',['kendi milik warga pecah semua','mata air dikuasai oleh kakek di hutan','warga tidak mau mencari air','musim kemarau panjang membuat sumur-sumur mengering'],3,'Sumur-sumur mengering karena musim kemarau panjang.'],
+['Ketika bertemu kakek yang kehausan, Sekar ....',['meninggalkan kakek dan pulang ke rumah','mengajak kakek ke desa untuk meminta air','memberikan air terakhir dari kendinya','meminta tongkat milik kakek'],2,'Sekar memberikan air terakhir dari kendinya kepada kakek.'],
+['Sikap Sekar yang patut diteladani adalah ....',['suka menolong orang yang membutuhkan tanpa mengharapkan imbalan','mementingkan diri sendiri saat keadaan sulit','menyimpan air hanya untuk dirinya sendiri','menyalahkan warga desa atas kemarau'],0,'Menolong orang yang membutuhkan tanpa pamrih patut diteladani.'],
+['Dari kalimat “Tanpa berpikir panjang, Sekar memberikan air terakhir dari kendi miliknya”, dapat disimpulkan bahwa Sekar ....',['takut kepada kakek','peduli dan rela berkorban demi orang lain','tidak membutuhkan air','ingin mendapat hadiah dari kakek'],1,'Memberikan air terakhir menunjukkan Sekar peduli dan rela berkorban.'],
+['Kata “mengering” pada Teks 2 jika dipenggal menjadi suku kata yang tepat adalah ....',['men-ge-ring','meng-e-ring','me-nge-ring','me-ng-e-ring'],2,'Pemenggalan yang tepat: me-nge-ring.'],
+['Jika kamu bertemu orang yang kehausan seperti kakek dalam cerita, tanggapan yang paling tepat adalah ....',['pura-pura tidak melihatnya','menyuruh orang lain saja yang menolong','memberi air, lalu meminta imbalan','memberikan air minum yang kupunya dengan senang hati'],3,'Menolong dengan senang hati sesuai nilai kepedulian dalam cerita.'],
+['Latar tempat dalam cerita “Asal Mula Sendang Bening” adalah ....',['istana dan sawah','desa di kaki gunung dan hutan','sungai dan kota','pantai dan pasar'],1,'Latar tempat: desa di kaki gunung dan hutan.'],
+['Tokoh Sekar dalam cerita memiliki watak ....',['rajin, jujur, dan suka menolong','malas dan pelit','sombong dan pemarah','penakut dan pendiam'],0,'Sekar dikenal rajin, jujur, dan suka menolong.'],
+['Bagian cerita yang menceritakan musim kemarau panjang dan sumur-sumur yang mengering merupakan bagian ....',['orientasi','resolusi','koda','komplikasi'],3,'Masalah kemarau dan sumur mengering termasuk komplikasi.'],
+['Kalimat yang mengandung makna konotatif adalah ....',['Sekar membawa kendi berisi air jernih.','Kakek itu menancapkan tongkatnya ke tanah.','Sekar adalah bunga desa yang disayangi semua warga.','Warga menjaga mata air itu dengan bergotong royong.'],2,'“Bunga desa” bermakna kiasan (konotatif), yaitu gadis yang disayangi.']];
+const U=[
+{x:'T0',q:'Tulislah teks eksplanasi sederhana (4–6 kalimat) tentang proses membuat kompos dari sisa sayur! Perhatikan struktur teks eksplanasi dan gunakan kata penghubung urutan. Gunakan petunjuk berikut:<ol class="pt"><li>sisa sayur dikumpulkan dan dipotong kecil;</li><li>dicampur dengan tanah di dalam wadah, lalu ditutup;</li><li>diaduk seminggu sekali;</li><li>tiga sampai empat minggu kemudian sisa sayur berubah menjadi kompos.</li></ol>',p:[['a','Jawabanmu']],k:'Pernyataan umum tentang kompos (2); deret penjelas memuat keempat langkah berurutan (3; tiga langkah = 2, dua langkah = 1); kata penghubung urutan min. dua kali (1); interpretasi/penutup (1); ejaan dan tanda baca (1).'},
+{x:'T1',q:'Bacalah kembali Teks 1!',p:[['a','a. Tuliskan ide pokok paragraf ketiga!'],['b','b. Tuliskan dua tahap daur ulang sampah plastik setelah plastik dicuci!'],['c','c. Sampaikan pendapatmu secara santun tentang pentingnya memilah sampah dari rumah, disertai alasan (2–3 kalimat)!']],k:'a. Daur ulang mengurangi sampah plastik dan membuat lingkungan bersih, sehingga perlu memilah sampah dari rumah (2). b. Dua tahap benar, mis. dicacah, dipanaskan hingga meleleh, atau dicetak menjadi barang baru (masing-masing 1). c. Pendapat jelas (1), alasan masuk akal (2), bahasa santun (1).'},
+{x:'T2',q:'Bacalah kembali Teks 2!',p:[['a','a. Tuliskan dua sifat Sekar yang patut diteladani beserta buktinya dari cerita!'],['b','b. Ceritakan pengalamanmu ketika menolong orang lain dan perasaanmu saat itu!']],k:'a. Dua sifat tepat (rajin, jujur, atau suka menolong), masing-masing 1 (2); bukti dari cerita tiap sifat, mis. memberikan air terakhir kepada kakek (2). b. Pengalaman menolong yang jelas (2), perasaan diungkapkan (1), kalimat runtut dan santun (1).'},
+{x:'T2',q:'Bacalah kembali Teks 2!',p:[['a','a. Tuliskan tokoh, latar tempat, latar waktu, dan amanat cerita tersebut!'],['b','b. Tuliskan satu kalimat inti untuk setiap bagian cerita: orientasi, komplikasi, dan resolusi!']],k:'a. Tokoh: Sekar dan minimal satu tokoh lain (1); latar tempat: desa di kaki gunung dan hutan (1); latar waktu: musim kemarau yang panjang (1); amanat sesuai, mis. suka menolong akan membawa kebaikan bagi banyak orang (2). b. Orientasi: Sekar gadis rajin dan suka menolong yang tinggal bersama neneknya (1); komplikasi: kemarau membuat sumur mengering dan Sekar memberikan airnya kepada kakek (1); resolusi: air memancar dari tongkat kakek dan desa tidak lagi kekurangan air (1).'},
+{x:'T0',q:'Perhatikan kerangka cerita rakyat berikut yang urutannya masih acak!<ol class="pt" style="list-style:none;padding:0"><li>(1) Burung itu ternyata penjaga hutan yang memberi Raka sebuah biji emas.</li><li>(2) Raka pergi ke hutan untuk mencari kayu bakar.</li><li>(3) Pohon itu berbuah lebat dan buahnya dibagikan kepada seluruh warga desa.</li><li>(4) Raka menanam biji itu di tanah lapang desa.</li><li>(5) Di tengah hutan, Raka menolong seekor burung kecil yang terjerat jaring.</li></ol>',p:[['a','a. Urutkan nomor kalimat tersebut agar menjadi alur cerita yang runtut!','o'],['b','b. Tulislah kembali kerangka tersebut menjadi cerita singkat (5–6 kalimat) dengan bahasa yang baik dan benar serta pilihan kata yang menarik!'],['c','c. Tuliskan satu amanat dari cerita tersebut!']],k:'a. Urutan benar: 2 – 5 – 1 – 4 – 3 (dinilai otomatis, maks. 3). b. Cerita runtut sesuai urutan benar (2), bahasa baik dan benar (1), pilihan kata menarik dan bervariasi (1). c. Amanat sesuai, mis. menolong makhluk lain akan mendatangkan kebaikan (1).'}];
+const KEY='cbt_bi_v1';let S={};try{S=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+S.ans=S.ans||{};S.fl=S.fl||{};S.ua=S.ua||{};S.us=S.us||{};S.i=S.i||0;S.flt=S.flt||'all';
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+let tmr=null;
+function show(v){if(v==='res'&&!S.done){return alert('Hasil tersedia setelah ujian diselesaikan.')}
+['dash','exam','res'].forEach(x=>$('#v-'+x).classList.toggle('hid',x!==v));document.querySelectorAll('.nv[data-v]').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+if(v==='res')renderRes();if(v==='dash')dash();window.scrollTo(0,0)}
+function dash(){const n=S.name||'Siswa';$('#un').textContent=n;$('#wn').textContent=n;$('#av').textContent=n[0].toUpperCase();$('#pn').value=S.name||'';$('#pk').value=S.kelas||'6';$('#pa').value=S.absen||'';
+$('#sb').textContent=S.end&&!S.done?'▶ Lanjutkan Ujian':'▶ Mulai Ujian'}
+['pn','pk','pa'].forEach(id=>$('#'+id).addEventListener('input',()=>{S.name=$('#pn').value.trim();S.kelas=$('#pk').value.trim();S.absen=$('#pa').value.trim();save();$('#er').textContent='';$('#un').textContent=S.name||'Siswa';$('#wn').textContent=S.name||'Siswa';$('#av').textContent=(S.name||'S')[0].toUpperCase()}));
+function startExam(){if(S.done){if(!confirm('Ujian sudah selesai. Ulangi dari awal? Jawaban lama akan dihapus.'))return;S={name:S.name,kelas:S.kelas,absen:S.absen,ans:{},fl:{},ua:{},us:{},i:0,flt:'all'}}
+if(!S.name){show('dash');$('#er').textContent='Isi nama lengkap terlebih dahulu.';$('#pn').focus();return}
+if(!S.end){S.end=Date.now()+90*60000;S.i=0}save();show('exam');renderExam();clearInterval(tmr);tmr=setInterval(tick,1000);tick()}
+function tick(){const r=Math.max(0,S.end-Date.now()),s=Math.ceil(r/1000),e=$('#tm');if(e){e.textContent=[Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(x=>String(x).padStart(2,'0')).join(':');e.classList.toggle('w',s<300)}if(r<=0&&!S.done){clearInterval(tmr);alert('Waktu habis. Jawaban dikumpulkan otomatis.');finish()}}
+function isAns(i){if(i<20)return S.ans[i]!==undefined;const n=i-19;return U[n-1].p.some(p=>{const v=S.ua[n+p[0]];return p[2]?(v||[]).some(Boolean):(v||'').trim()})}
+function renderNav(){$('#gr').innerHTML=Array.from({length:25},(_,i)=>`<button class="nb ${isAns(i)?'a':''} ${S.fl[i]?'f':''} ${i===S.i?'c':''}" onclick="go(${i})">${i+1}</button>`).join('');
+const a=Array.from({length:25},(_,i)=>isAns(i)).filter(Boolean).length;$('#pg').textContent=a+' / 25 terjawab'}
+function go(i){S.i=Math.max(0,Math.min(24,i));save();renderExam();window.scrollTo(0,0)}
+function renderExam(){const i=S.i,pg=i<20;let pk,body;
+if(pg){const q=Q[i];pk=i<10?'T1':'T2';body=`<div style="margin-bottom:8px">${q[0]}</div>`+q[1].map((o,j)=>`<button class="op ${S.ans[i]===j?'s':''}" onclick="pick(${i},${j})"><i>${'ABCD'[j]}</i><span>${esc(o)}</span></button>`).join('')}
+else{const n=i-19,u=U[n-1];pk=u.x;body=`<div style="margin-bottom:10px">${u.q}</div>`+u.p.map(p=>{const k=n+p[0];if(p[2]){const v=S.ua[k]||[];return `<label>${esc(p[1])}</label><div class="ord">${[0,1,2,3,4].map(j=>`<select data-o="${k}" data-j="${j}"><option value="">Ke-${j+1}</option>${[1,2,3,4,5].map(x=>`<option ${+v[j]===x?'selected':''}>${x}</option>`).join('')}</select>`).join('')}</div>`}
+return `<label>${esc(p[1])}</label><textarea data-k="${k}" placeholder="Tulis jawabanmu di sini...">${esc(S.ua[k]||'')}</textarea>`}).join('')}
+const ps=P[pk];$('#v-exam').innerHTML=`<div class="eh"><div><b>Soal ${i+1} dari 25</b> · <span style="color:var(--m)">${pg?'Pilihan Ganda':'Uraian '+(i-19)}</span></div><div class="tm" id="tm">--:--:--</div></div>
+<div class="ex"><div><div class="card"><div class="qb ${ps?'p':''}">${ps?`<div class="ps"><h4>${ps[0]}</h4>${esc(ps[1]).replace(/\n\n/g,'</p><p>').replace(/^/,'<p>')+'</p>'}</div>`:''}<div>${body}</div></div>
+<div class="nav"><button class="btn o" onclick="go(${i-1})" ${i===0?'disabled':''}>← Sebelumnya</button><button class="btn" style="background:${S.fl[i]?'var(--o)':'#fff'};color:${S.fl[i]?'#fff':'var(--o)'};border:1px solid var(--o)" onclick="flag()">⚑ Ragu-ragu</button>${i<24?`<button class="btn" onclick="go(${i+1})">Selanjutnya →</button>`:`<button class="btn g" onclick="ask()">Selesai Ujian ✔</button>`}</div></div></div>
+<div class="card"><h3>Navigasi Soal</h3><div class="gr" id="gr"></div><div class="lg"><span><s style="background:var(--g)"></s>Terjawab</span><span><s style="background:var(--o)"></s>Ragu-ragu</span><span><s style="border:1px solid var(--l)"></s>Belum</span></div><div id="pg" style="font-weight:600;margin-bottom:10px"></div><button class="btn g" style="width:100%" onclick="ask()">Selesai Ujian</button></div></div>`;
+document.querySelectorAll('#v-exam textarea').forEach(t=>t.addEventListener('input',()=>{S.ua[t.dataset.k]=t.value;save();renderNav()}));
+document.querySelectorAll('#v-exam select').forEach(t=>t.addEventListener('change',()=>{const a=S.ua[t.dataset.o]||[];a[t.dataset.j]=t.value;S.ua[t.dataset.o]=a;save();renderNav()}));renderNav();tick()}
+function pick(i,j){S.ans[i]=j;save();renderExam()}
+function flag(){S.fl[S.i]=!S.fl[S.i];save();renderExam()}
+function ask(){const a=Array.from({length:25},(_,i)=>isAns(i)).filter(Boolean).length,f=Object.values(S.fl).filter(Boolean).length;
+$('#mc').innerHTML=`<h3>Selesaikan ujian?</h3><p>Terjawab: <b>${a}</b> dari 25 soal<br>Belum dijawab: <b>${25-a}</b><br>Ragu-ragu: <b>${f}</b></p><p style="color:var(--m);font-size:13px">Setelah diselesaikan, jawaban tidak dapat diubah.</p><div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn o" onclick="$('#mo').classList.remove('on')">Kembali</button><button class="btn g" onclick="finish()">Ya, Selesai</button></div>`;$('#mo').classList.add('on')}
+function finish(){$('#mo').classList.remove('on');clearInterval(tmr);S.done=true;save();show('res')}
+function calc(){let c=0,w=0,k=0;Q.forEach((q,i)=>{const a=S.ans[i];if(a===undefined)k++;else a===q[2]?c++:w++});
+const key=[2,5,1,4,3],a=S.ua['5a']||[];let m=0;key.forEach((v,j)=>{if(+a[j]===v)m++});const os=m===5?3:m>=3?2:m>=1?1:0;
+let man=0,pend=0;for(let n=1;n<=5;n++){const v=S.us[n];if(v===undefined||v==='')pend++;else man+=+v}
+return{c,w,k,os,man,pend,pg:c*3,tot:c*3+os+man}}
+function renderRes(){const r=calc(),pct=Math.round(r.tot),col=pct>=75?'#12a150':pct>=60?'#f59e0b':'#dc2626';
+const f=S.flt,items=Q.map((q,i)=>{const a=S.ans[i],st=a===undefined?'k':a===q[2]?'b':'s';return{q,i,a,st}}).filter(x=>f==='all'||x.st===f);
+$('#v-res').innerHTML=`<div class="ban" style="gap:24px;justify-content:flex-start"><div class="ring" style="background:conic-gradient(${col} ${pct*3.6}deg,rgba(255,255,255,.3) 0)"><div><span><b>${pct}</b><br><small>dari 100</small></span></div></div>
+<div><h2>Hasil Ujian: ${esc(S.name)}</h2><p>Kelas ${esc(S.kelas||'-')} · No. Absen ${esc(S.absen||'-')}<br>${r.pend?`Uraian belum seluruhnya dinilai (${r.pend} dari 5). Nilai akan bertambah setelah skor uraian diisi di bawah.`:'Seluruh komponen telah dinilai.'}</p><button class="btn w" onclick="window.print()">🖨 Cetak</button> <button class="btn w" onclick="startExam()">↻ Ulangi Ujian</button></div></div>
+<div class="g4"><div class="card st"><div class="ic" style="background:#e3f7ec">✅</div><div><b>${r.c}</b><span>PG benar</span></div></div><div class="card st"><div class="ic" style="background:#fde8e8">❌</div><div><b>${r.w}</b><span>PG salah</span></div></div><div class="card st"><div class="ic" style="background:#fff1de">⬜</div><div><b>${r.k}</b><span>PG kosong</span></div></div><div class="card st"><div class="ic" style="background:#e5edff">🎯</div><div><b>${r.pg} / 60</b><span>Skor pilihan ganda</span></div></div></div>
+<div class="card"><h3>Pembahasan Pilihan Ganda</h3><div>${[['all','Semua'],['b','Benar'],['s','Salah'],['k','Kosong']].map(x=>`<button class="chip ${f===x[0]?'on':''}" onclick="S.flt='${x[0]}';save();renderRes()">${x[1]}</button>`).join('')}</div>
+${items.map(({q,i,a,st})=>`<div class="pb ${st==='b'?'ok':st==='s'?'no':'kk'}"><b>${i+1}.</b> ${q[0].replace(/<div class="il">[\s\S]*?<\/div>/,'<i>[Lihat ilustrasi pada soal]</i>')}<div style="font-size:13.5px;margin-top:6px">Jawabanmu: <b>${a===undefined?'— (kosong)':'ABCD'[a]+'. '+esc(q[1][a])}</b><br>Kunci: <b style="color:var(--g)">${'ABCD'[q[2]]}. ${esc(q[1][q[2]])}</b><br><span style="color:var(--m)">Pembahasan: ${esc(q[3])}</span></div></div>`).join('')}</div>
+<div class="card" style="margin-top:14px"><h3>Penilaian Uraian</h3><p style="color:var(--m);font-size:13px;margin-top:0">Nomor 5a dinilai otomatis (${r.os}/3). Untuk jawaban lainnya, bandingkan dengan kunci/pedoman lalu isi skor (guru atau siswa bersama guru).</p>
+${U.map((u,ix)=>{const n=ix+1,mx=n===5?5:8,ans=u.p.map(p=>{const v=S.ua[n+p[0]];const t=p[2]?((v||[]).filter(Boolean).length?'Urutan: '+(v||[]).map(x=>x||'?').join(' – '):''):(v||'');return `<div style="font-size:12px;color:var(--m)">${esc(p[1])}</div><div class="ans">${t.trim()?esc(t):'<i>(tidak dijawab)</i>'}</div>`}).join('');
+return `<div class="pb"><b>Uraian ${n}</b>${ans}<div style="font-size:13px;background:#eefaf3;border-radius:8px;padding:8px 10px"><b>Kunci / pedoman:</b> ${esc(u.k)}</div><label>Skor ${n===5?'(b + c, maks. 5)':'(maks. 8)'}</label><input type="number" min="0" max="${mx}" style="max-width:110px" value="${S.us[n]===undefined?'':S.us[n]}" onchange="setUs(${n},this.value,${mx})"></div>`}).join('')}
+<div style="font-weight:700;font-size:16px">Nilai Akhir = ${r.pg} (PG) + ${r.os+r.man} (uraian) = <span style="color:${col}">${r.tot}</span> / 100</div></div>`}
+function setUs(n,v,mx){if(v==='')delete S.us[n];else S.us[n]=Math.max(0,Math.min(mx,+v||0));save();renderRes()}
+function logout(){if(confirm('Keluar dan hapus semua data ujian di perangkat ini?')){try{localStorage.removeItem(KEY)}catch(e){}S={ans:{},fl:{},ua:{},us:{},i:0,flt:'all'};clearInterval(tmr);show('dash')}}
+dash();if(S.end&&!S.done){startExam()}
+</script></body></html>
